@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="main.css" rel="stylesheet">
+  <title>Rakenduste Programmeerimine</title>
+	<script>
+	const x = window.location
+	const urlParams = new URLSearchParams(window.location.search);	
+	const title = urlParams.get("title");
+	const cost = urlParams.get("cost");
+	const src = urlParams.get("src");
+	alert('Title: ${title} cost: ${cost} path: ${src}')
+  </script>
+</head>
+<body>
+  <div class="header">
+    <a href="./index.html">
+      <img class="header_logo" src="./images/warframe.jpg">
+    </a>
+    <div class="header_buttons">
+      <button>Login/Signup</button>
+      <button>Cart</button>
+    </div>
+  </div>
+  <div class="content">
+    Toote lehekülg
+  </div>
+
+</body>
+</html>
