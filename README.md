@@ -1,2 +1,2 @@
 # Rakenduste-Programmeerimine
-Heroku hakkas vastama fatal erroritega nii et selle kohta on vaja küsida ning seitsmes ülesanne tekitas ka küsimuse
+https://guarded-bayou-31651.herokuapp.com/index.html
