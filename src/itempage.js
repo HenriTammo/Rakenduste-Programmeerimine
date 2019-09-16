@@ -1,5 +1,7 @@
 /*jshint esversion:6*/
-const x = window.location;
+
+function setup(){
+  const x = window.location;
 const urlParams = new URLSearchParams(window.location.search);
 const title = urlParams.get("title");
 const cost = urlParams.get("cost");
@@ -31,8 +33,14 @@ container.append(image);
 container.append(textElement);
 container.append(costElement);
 
+const app = document.getElementById("item-body");
 
-window.addEventListener("load", () => {
-  const app = document.getElementById("item-body");
-  app.append(container);
-});
+if(!app) return;
+
+app.append(container);
+}
+
+module.exports = {
+  setup,
+};
+
