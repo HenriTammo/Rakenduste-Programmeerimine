@@ -6,41 +6,97 @@ const phones = [{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mN-8MOT6oy_G_k0
 const laptops = [{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/~OkAAOSwhEhcSusV/s-l225.webp","title":"Lenovo ThinkPad X1 Carbon Laptop Core i7 4600U 240GB SSD 8GB RAM W10 Ultrabook","price":"$345.65","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/9SsAAOSwSwVdRG0M/s-l225.webp","title":"New ListingDell Latitude E4300 Core 2 Duo @ 2.40GHz 250GB HDD 8GB RAM Windows 7 Pro laptop ","price":"$9.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/LTEAAOSw1rpdekfG/s-l225.webp","title":"New ListingHP 250 G4, Intel i3-4005u @ 1.70GHz, 8GB, 120 GB SSD Win Pro 15.6\" Laptop F4","price":"$148.08","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/~GMAAOSwxB9dVYEg/s-l225.webp","title":"New ListingLenovo B50 Laptop i5 CPU 8gb RAM 500gb HD Windows 7 64bit","price":"$154.31","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/vLIAAOSwcPNdefVd/s-l225.webp","title":"New ListingNIPPY Upgraded Windows 10 Acer Laptop--HDMi + 320GB HD + 4GB RAM--FAST P&P (D1)","price":"$86.40","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/Z6AAAOSwmJJdWrYW/s-l225.webp","title":"New ListingHP 625 LAPTOP WINDOWS 10 CORE AMD ATHLON II WEBCAM 8GB 320GB 15.6\" HDMI H4","price":"$86.35","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/x90AAOSwyytdZ-zl/s-l225.webp","title":"New ListingHP X360 CONVERTIBLE 13\" LAPTOP TOUCHSCREEN INTEL CORE I5 7TH GEN 8GB RAM SSD","price":"$246.89","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/jVEAAOSwqbZdH3Ij/s-l225.webp","title":"SPONSOREDAcer Iconia w701 2 in 1 Windows 10 Tablet Laptop Intel i3 1.90GHz 4GB 120GB","price":"$104.92","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mMF8dih0xFE24V7JZk6rNVQ/s-l225.webp","title":"SPONSOREDCheap Fast Kids Student Lenovo Netbook Laptop | 2GB | 320GB | WiFi | Win10 |HDMI","price":"$111.09 to $117.27","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/BFEAAOSwOKxcP6m8/s-l225.webp","title":"New ListingLenovo Thinkpad Laptop T400 Intel Core Duo P8400 2.26GHZ 256GB HD 4GB Ram Linux","price":"$79.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mtk3BrEfiLaVus3EwjlKA1A/s-l225.webp","title":"CHEAP FAST DUAL CORE LAPTOP WINDOWS 7 or 10 OS, 2GB 3GB 4GB RAM WITH WARRANTY","price":"$61.71 to $98.75","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/vKEAAOSwHZtdelbt/s-l225.webp","title":"New ListingAcer Nitro 5 Gaming Laptop 15.6\" (i5-8300H, Nvidia GTX 1050, 32GB DDR4, 1TB HDD)","price":"$600.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/qcYAAOSwBfJdejWX/s-l225.webp","title":"New ListingBrand New. Never Opened. HP Chromebook 14-Ca004na Laptop","price":"$344.43","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/jLAAAOSwXENdelkn/s-l225.webp","title":"New ListingDell Laptop 13'3inch -1318, intel dual-core 1.9ghz, 3gb, 320gb, cheap laptop  ","price":"$74.07","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/0aQAAOSwSn1dei~R/s-l225.webp","title":"New ListingHP EliteBook 840 G2 i5-5300U 2.3GHz Processor - 4GB RAM - 500GB HDD","price":"$129.62","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/BiAAAOSwzJ9dehfP/s-l225.webp","title":"New ListingLenovo ThinkPad Edge E135 Laptop, 8 GB RAM - 128 GB-SSD","price":"$86.42","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/Rq8AAOSw~IldeUqN/s-l225.webp","title":"SPONSOREDNew ListingDell Precision M2800 15.6\" Laptop i7-4810MQ 500GB HDD 16GB RAM FirePro W4170M","price":"$229.95","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/WigAAOSwSzZc~x1y/s-l225.webp","title":"SPONSOREDCHUWI HeroBook 14.1\" Laptop Windows 10 Intel Quad Core Notebook PC 4GB+64GB","price":"$199.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/myAyqwf5_I1ekfeiqDiO6qA/s-l225.webp","title":"HP EliteBook 820 G1 12.5\" Laptop Intel i5-4300u 1.9GHz 4th gen - Options ","price":"$123.44 to $302.44","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/ga8AAOSwiFNdGhOQ/s-l225.webp","title":"Lenovo laptop 15,6\" Laptop AMD a4 4gb ddr4 500gb Webcam Windows 10","price":"$230.83","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/uBIAAOSw9Gdcj4rE/s-l225.webp","title":"PC Notebook Laptop Refurbished HP 6470b Core i3 RAM 4gb HDD 250gb","price":"$142.95","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/iacAAOSwK1ZdcQdG/s-l225.webp","title":"New ListingToshiba Portege Z30-C-155 Core i7-4600U Business Laptop 8GB RAM, 120GB SSD Win10","price":"$222.21","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mrxzRXmCdcrzYQrsKLMd0MQ/s-l225.webp","title":"CHEAP Toshiba Core 2 Duo LAPTOP WINDOWS 7 10 2GB 4GB RAM 14\" WiFi Warranty","price":"$79.49 to $158.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/7KUAAOSwvZFdekao/s-l225.webp","title":"New ListingDell Latitude E7240 Laptop Core i7-4600U CPU @ 2.10GHz 256GB 8GB RAM SSD Win10pr","price":"$135.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/HI0AAOSwnypcviDk/s-l225.webp","title":"New ListingDell latitude E7440 16GB RAM 256GB SSD Core i7 vPro Ultrabook Laptop Windows 10","price":"$1.22","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/AvkAAOSwXn5delOI/s-l225.webp","title":"New ListingHP Stream 11-Pro Intel Celeron 2.16GHz 2GB RAM 32GB eMMc Windows 10 Gray","price":"$99.98","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mm3T-raNtqNqNxqqZ9oPzCQ/s-l225.webp","title":"Cheap gaming laptop Dell 14.1\" Intel I5 2.5Ghz 8GB 480GB SSD DVD Win 7 10 HDMI","price":"$160.47 to $345.65","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/rRMAAOSwgYldUWDx/s-l225.webp","title":"New ListingHP ENVY x360 Touchscreen Laptop AMD Quad-Core A12, 8GB RAM, 1TB HD","price":"$175.30","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mrn7l_S-mXVikrw7F_gtRtA/s-l225.webp","title":"Dell Latitude Laptop 14.1\" Intel i5 1TB SSD 🚩16GB RAM 🚩WiFI HDMI + Win 10 Pro","price":"$154.95 to $334.95","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/wg4AAOSwQF5dcQuT/s-l225.webp","title":"New ListingLenovo ThinkPad T440P Laptop i5-4300M 2.6Ghz 4GB 500gb Webcam Windows 10 Office.","price":"$160.42","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/JcIAAOSwLFNdelhJ/s-l225.webp","title":"New ListingDell Latitude E6540 Laptop : i7 3.8GHz : 16GB RAM : 512GB SSD : Win 10 , Office","price":"$400.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mZ6b8txf_SIt8yXHlDdO2vQ/s-l225.webp","title":"SPONSORED14.1\" inch CHEAP Laptop Intel Core i3 i5 4GB 8GB Ram 320GB 500GB HDD Wi-Fi Win10","price":"$86.40 to $159.24","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mGnMKG2uA7b_lvCZbGySAVg/s-l225.webp","title":"SPONSOREDCHEAP DELL HP FUJITSU CORE i5/i3 LAPTOP 16GB/8GB 1TB/500GB WiFi Win10/7 WARRANTY","price":"$80.23 to $166.65","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/KfcAAOSwFCZdeLne/s-l225.webp","title":"New ListingNippy Windows 7 Laptop--160GB HD + 2GB RAM +Charger--FREE EXPRESS DELIVERY  (C2)","price":"$60.48","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/7yMAAOSwos5dbXJR/s-l225.webp","title":"HP ChromeBook 11 G4 11.6\" Intel Celeron N2840 2.16GHz 4GB 16GB SSD HD Graphics","price":"$89.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/2z8AAOSw3jZdZcX6/s-l225.webp","title":"New ListingHP LAPTOP  NOTEBOOK  WEBCAM   WINDOWS 10  READY TO USE GOOD CONDITION!","price":"$65.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/CP4AAOSwtYJda7Di/s-l225.webp","title":"New ListingLENOVO Thinkpad T480 i7-8650, 16GB Ram 512GB NVMe SSD 14\" IPS FHD ","price":"$950.55","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/VM4AAOSwG7Bdeltw/s-l225.webp","title":"New ListingFujitsu LIFEBOOK S751 Laptop i5-2520M 14 inch 2,5GHz 160GB 4GB Webcam -109396","price":"$87.87","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/m4w0IiJgaHTxknF8On87vBQ/s-l225.webp","title":"Gaming laptop Lenovo ThinkPad X220 12.5\" 500GB Intel i5 2.5GHz 8GB Win 7 10 SSD","price":"$135.78 to $246.89","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/5ccAAOSwFOVdbV4Q/s-l225.webp","title":"New ListingDELL ALIENWARE 15.6\" M17x Intel CORE EXTREME - Q9300 2.53Ghz 6GB RAM GTX 260M","price":"$438.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/TcYAAOSwOTddelb9/s-l225.webp","title":"New ListingHP PROBOOK 4510s Core 2 Duo\tCheap Laptop 2GB RAM, 160GB HDD 15.6\" Win 10 DVD-RW","price":"$111.09","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/wZUAAOSwGrZdelKV/s-l225.webp","title":"New ListingBRAND NEW SEALED HP 14-cf1061st 14\" Laptop Intel i3 128GB SSD 4GB RAM Windows 10","price":"$334.97","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/j9gAAOSwxJlc8X7k/s-l225.webp","title":"New ListingHP Laptop 14 Inch","price":"$111.11","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/m9KckRM4VQwXdFHh41nFESA/s-l225.webp","title":"FAST CHEAP INTEL CORE i3/ i5/ i7 LAPTOP WINDOWS 7/10 250GB/500GB HD 4GB/8GB RAM","price":"$71.59 to $197.51","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mguUZYFW4rjETF4o3IKWixw/s-l225.webp","title":"HOT! LENOVO 15.6” Laptop Intel 2.60GHz 4GB 1TB DVD+RW WebCam HDMI USB Windows 10","price":"$265.95","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/6tkAAOSw4ThdZap5/s-l225.webp","title":"New ListingDell Latitude E6540 i5-4310 2.7GHz 8GB 250GB SSD  Win 10 Pro 64, DVD-RW, 15.6\" ","price":"$275.00","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/oxQAAOSwRiFcngjW/s-l225.webp","title":"Lenovo Thinkpad X230 Laptop Intel Core i5 3320M 2.50GHz 4GB Ram WIFI-320gb","price":"$134.56","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/VowAAOSwVXpc9Z~4/s-l225.webp","title":"Laptop PC Lenovo ThinkPad x230 12.5\" CPU i5-3320m 4gb ram SSD 128gb win10 _ 24h","price":"$142.85","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/xGcAAOSwnfFdVL19/s-l225.webp","title":"New ListingHP Stream Laptop PC 14\" HD (Intel Celeron N3060, 4 GB RAM, 32 GB eMMC)- Blue","price":"$79.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/m/mpaj7c9oyKbXwBiemfkyy2A/s-l225.webp","title":"Lenovo ThinkPad X230 Core i5 2,6 GHz, HD, Win 7, equipment and condition selectable","price":"$130.86","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/Vn0AAOSwrXddFA77/s-l225.webp","title":"New ListingNEW HP 15.6\" Laptop Intel Core i3-8130U,20GB Memory,1TB HDD,Windows 10,DVD-RW","price":"$339.85","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/9KkAAOSw1Exb2FPd/s-l225.webp","title":"New ListingLenovo T530, 15.6\" Laptop, Core i5 2.6GHz, 4GB RAM, 320GB HDD, Windows 7 Pro","price":"$172.82","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/qpUAAOSwksxdeka1/s-l225.webp","title":"New ListingHP Elitebook 820 Laptop i5 4200U 1.60GHz 8GB RAM 500GB HDD Windows 10 WIFI","price":"$148.14","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/oi0AAOSwIihdelro/s-l225.webp","title":"New ListingHP 15-DA0046NR 15.6\" Laptop 7th Gen i3  1TB HDD Touchscreen - F463","price":"$499.97","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/xRwAAOSwIVpdeXl7/s-l225.webp","title":"SPONSOREDNew ListingLenovo ThinkPad W541 Intel i7-4710MQ 2.50GHz 16GB DDR3L 512GB SSD K1100M","price":"$349.99","category":"laptop"},{"imgSrc":"https://i.ebayimg.com/thumbs/images/g/FJ8AAOSwvopcrORU/s-l225.webp","title":"SPONSOREDPanasonic toughbook CF-29 Rugged laptop 1.6GHz 1.5GB RAM 40GB HDD Windows XP Pro","price":"$141.97","category":"laptop"}];
 
 const categories = {
-	PHONE: "phones",
-	LAPTOP: "laptop",
+    PHONE: "phones",
+    LAPTOP: "laptop",
 };
 
 let selectedCategory = categories.PHONE;
 
 function createItems(){
+<<<<<<< HEAD:src/homepage.js
+<<<<<<< HEAD:src/homepage.js
+    const root = document.getElementById("item-list");
+=======
+>>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e:src/homepage.js
 
-  let items = [];
+    root.innerHTML = null;
 
-  root.innerHTML = null;
+    let items = [];
+    if(selectedCategory === categories.PHONE){
+        items = phones;
+        console.log("set phones");
+    }else if(selectedCategory === categories.LAPTOP) {
+        items = laptops;
+    }
+    items.forEach((phone) => {
+       const element = utils.createItemElement(phone);
+       root.append(element);
+        //console.log(element);
+    });
+}
 
-  if(selectedCategory === categories.PHONE){
-    items = phones;
-  }
-  else if(selectedCategory === categories.LAPTOP){
-    items = laptops;
-  }
+function setupCategoryListener(){
+    const dropdown = document.getElementById("category-dropdown");
+    dropdown.addEventListener('change', (event) => {
+        selectedCategory = event.target.value;
+        createItems();
+      });
+}
 
+
+function createItemElement(item){
+    const anchor = document.createElement("a");
+    anchor.href = `./item.html?title=${item.title}&cost=${item.price}&src=${item.imgSrc}`;
+
+    const itemContainer = document.createElement("div");
+    itemContainer.className = "item";
+
+    const imgElement = document.createElement("img");
+    imgElement.src = item.imgSrc;
+
+    const titleElement = document.createElement("div");
+    titleElement.textContent = item.title;
+    titleElement.className = "item_title";
+=======
+>>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34:src/homepage.js
+
+
+    const priceElement = document.createElement("div");
+    priceElement.innerText = item.price;
+    priceElement.className = "item_price";
+
+    anchor.append(itemContainer);
+    itemContainer.append(imgElement);
+    itemContainer.append(titleElement);
+    itemContainer.append(priceElement);
+
+    return anchor;
+
+<<<<<<< HEAD:src/homepage.js
+=======
   items.forEach((phone) => {
     const element = utils.createItemElement(phone);
     root.append(element);
     console.log(element);
   });
+>>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e:src/homepage.js
 }
+function setup(){
 
-function setupCategoryListener(){
-  const dropdown = document.getElementById("category-dropdown");
-  dropdown.addEventListener('change', (event) => {
-    console.log(event.target.value);
-    selectedCategory = event.target.value;
+    const root = document.getElementById("item-list");
+    if(!root) return;
     createItems();
-  });
+    setupCategoryListener();
 }
 
+<<<<<<< HEAD:src/homepage.js
+<<<<<<< HEAD:src/homepage.js
+module.exports = {
+    setup,
+};
+=======
+=======
+>>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34:src/homepage.js
 function setup(){
 
   const root = document.getElementById("item-list");
@@ -54,3 +110,7 @@ module.exports = {
   setup,
 };
 
+<<<<<<< HEAD:src/homepage.js
+>>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e:src/homepage.js
+=======
+>>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34:src/homepage.js
