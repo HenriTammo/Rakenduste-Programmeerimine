@@ -1,7 +1,7 @@
 /*jshint esversion:6*/
 
 function setup(){
-  const x = window.location;
+const x = window.location;
 const urlParams = new URLSearchParams(window.location.search);
 const title = urlParams.get("title");
 const cost = urlParams.get("cost");
@@ -39,21 +39,7 @@ if(!app) return;
 
 app.append(container);
 }
-<<<<<<< HEAD:src/itempage.js
-<<<<<<< HEAD:src/itempage.js
 
 module.exports = {
   setup,
 };
-=======
-=======
->>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34:src/itempage.js
-
-module.exports = {
-  setup,
-};
-
-<<<<<<< HEAD:src/itempage.js
->>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e:src/itempage.js
-=======
->>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34:src/itempage.js

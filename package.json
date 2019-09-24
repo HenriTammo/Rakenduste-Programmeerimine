@@ -5,16 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "test": "node server.js",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "start:dev": "webpack-dev-server --open"
-=======
-    "start:dev": "npm run build && npm run start"
->>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e
-=======
-    "start:dev": "npm run build && npm run start"
->>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --open --mode=\"development\""
   },
   "repository": {
     "type": "git",
@@ -27,29 +19,20 @@
   },
   "homepage": "https://github.com/HenriTammo/Rakenduste-Programmeerimine#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
-=======
-    "copy-webpack-plugin": "^5.0.4",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8"
->>>>>>> 68de6b9f4f55c53a2a80df82063507e3466efe5e
-=======
-    "copy-webpack-plugin": "^5.0.4",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8"
->>>>>>> 953750bd2d12b6d0f374d7b57bce4f5d9fe44b34
   }
 }
