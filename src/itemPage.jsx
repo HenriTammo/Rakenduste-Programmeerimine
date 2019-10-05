@@ -14,7 +14,7 @@ class ItemPage extends React.PureComponent{
     }
 
     fetchItem = () => {
-      fetch(`/api/items${this.props.match.params.itemId}`)
+      fetch(`/api/items/${this.props.match.params.itemId}`)
       .then( res =>{
         return res.json();
       })
@@ -44,7 +44,7 @@ class ItemPage extends React.PureComponent{
     }
   }
 
-  ItemPage.propType = {
+  ItemPage.propTypes = {
     match: PropTypes.object.isRequired,
   };
 
