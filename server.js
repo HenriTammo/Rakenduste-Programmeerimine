@@ -13,12 +13,8 @@ app.get("/api/items/:itemId", (req, res)=>{
   res.send(DB.getItem(req.params.itemId));
 });
 
-app.post("/items", (req, res)=>{
-  res.send("post hello");
-});
-
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+  res.sendFile(path.resolve(__dirname, "../dist", "index.html"));
 })
 
 app.use(express.static('dist'));
