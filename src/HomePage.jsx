@@ -9,7 +9,7 @@ class HomePage extends React.PureComponent{
     super(props);
     this.state = {
       items: [],
-      selectedCategory: null,
+      selectedCategory: "phones",
     };
   }
 
@@ -30,7 +30,7 @@ class HomePage extends React.PureComponent{
       });
     })
     .catch(err => {
-      console.log("err", err)
+      console.log("err", err);
     });
   }
 
@@ -39,10 +39,14 @@ class HomePage extends React.PureComponent{
     this.setState({
       selectedCategory: event.target.value
     });
-
   }
 
+getVisibleItems = () => {
+  return this.state.items.filter( item => item.category === this.state.selectedCategory);
+};
+
   render(){
+    console.log("this.state", this.state);
     return (
       <>
         <Header />
@@ -50,7 +54,7 @@ class HomePage extends React.PureComponent{
           <option value="phones">Phones</option>
           <option value="laptops">Laptops</option>
         </select>
-        <ItemList items={this.state.items}/>
+        <ItemList items={this.getVisibleItems()}/>
       </>
     );
   }
