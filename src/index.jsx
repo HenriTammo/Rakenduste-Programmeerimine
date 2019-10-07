@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import HomePage from "./HomePage.jsx";
-import ItemPage from "./ItemPage.jsx";
+import ItemPage from "./itemPage.jsx";
 import { BrowserRouter, Route} from "react-router-dom";
 
 const root = document.getElementById("app");
