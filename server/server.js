@@ -13,6 +13,7 @@ app.get("/api/items/:itemId", (req, res)=>{
   res.send(DB.getItem(req.params.itemId));
 });
 
+
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, "../dist", "index.html"));
 })
