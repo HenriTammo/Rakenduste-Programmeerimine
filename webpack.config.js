@@ -1,6 +1,6 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "production",
@@ -10,32 +10,39 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-	new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new CopyPlugin([
       {
-        from: "estore"
+      from: "public"
       }
     ])
   ],
   module: {
     rules: [
-            {
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          //failOnError: true,
+          failOnError: true,
         },
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: {
+          loader: "babel-loader",
+        }
       }
     ]
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
