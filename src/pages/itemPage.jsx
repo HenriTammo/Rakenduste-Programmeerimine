@@ -41,3 +41,4 @@ class ItemPage extends React.PureComponent{
     match: PropTypes.object.isRequired,
   };
   export default ItemPage;
+//
