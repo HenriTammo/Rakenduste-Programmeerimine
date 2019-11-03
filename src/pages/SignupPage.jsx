@@ -51,6 +51,7 @@ class SignupPage extends React.PureComponent {
     render() {
         return (
             <>
+            <div><h1 style={{textAlign: "center"}}>Signup</h1></div>
             <div className="signupSection">
             <div className="info">
                 <h2>Welcome to</h2>
@@ -58,7 +59,7 @@ class SignupPage extends React.PureComponent {
                 <p>Account registration</p>
             </div>
             <form className="register-form"  onSubmit={this.handleSubmit}>
-                <h2>Create Account</h2>
+                <h2 className="header2_info">Create Account</h2>
                 <ul className="noBullet">
                     <li>
                         <label htmlFor="email"></label>

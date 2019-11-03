@@ -4,10 +4,8 @@
 }
 
 .signupSection {
-  background: url(https://source.unsplash.com/TV2gg2kZD1o/1600x800);
-  background-repeat: no-repeat;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
@@ -17,11 +15,23 @@
   color: white;
   box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
+.header2_info {
+  padding: 4px 0;
+  color: #4285F4;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .info {
-  width: 45%;
-  background: rgba(20, 20, 20, 0.8);
-  padding: 30px 0;
-  border-right: 5px solid rgba(30, 30, 30, 0.8);
+  padding-top: 50px;
+  padding-left: 50px;
+  color: #4285F4;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  text-align: center;
+
 }
 .info h2 {
   padding-top: 30px;
@@ -38,7 +48,7 @@
 .register-form {
   width: 70%;
   padding: 30px 0;
-  background: rgba(20, 40, 40, 0.8);
+  background: #FFFFFF;
   transition: 0.2s;
 }
 .signupForm h2 {
@@ -53,25 +63,32 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  background: rgba(20, 20, 20, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   color: white;
   outline: none;
+  text-transform: uppercase;
 }
 .noBullet {
   list-style-type: none;
   padding: 0;
 }
 .join-btn {
-  border: 1px solid #0ab4b4;
-  background: rgba(20, 20, 20, 0.6);
-  font-size: 18px;
-  color: white;
-  margin-top: 20px;
-  padding: 10px 50px;
-  cursor: pointer;
-  transition: 0.4s;
+    outline: none;
+    background: #4285F4;
+    width:43%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
 }
-.join-btn:hover {
-  background: rgba(20, 20, 20, 0.8);
-  padding: 10px 80px;
+
+
+.message {
+  color: black;
 }
