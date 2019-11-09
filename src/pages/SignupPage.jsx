@@ -51,33 +51,24 @@ class SignupPage extends React.PureComponent {
     render() {
         return (
             <>
-            <div><h1 style={{textAlign: "center"}}>Signup</h1></div>
-            <div className="signupSection">
-            <div className="info">
-                <h2>Welcome to</h2>
-                <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-                <p>Account registration</p>
-            </div>
-            <form className="register-form"  onSubmit={this.handleSubmit}>
-                <h2 className="header2_info">Create Account</h2>
-                <ul className="noBullet">
-                    <li>
-                        <label htmlFor="email"></label>
-                        <input type="email" className="inputFields" placeholder="Email" name= {"email"} onChange = {this.handleChange}/>
-                    </li>
-                    <li>
-                        <label htmlFor="password"></label>
-                        <input type="password" className="inputFields" placeholder="Password" name= {"password"} onChange = {this.handleChange}/>
-                    </li>
-
-                    <li id="center-btn">
-                        <button className="join-btn"> submit </button>
-                    </li>
-                    <p className="message">Already registered? <Link to={"/login"}>Login</Link></p>
-                </ul>
-            </form>
-        </div>
-        </>
+            <div className="form" id="signup">
+                 <div className="form-toggle"></div>
+                 <div className="form-panel one">
+                     <div>
+                         <h1>Account creation</h1>
+                     </div>
+                     <div className="sep"></div>
+                     <div className="form-content">
+                         <form onSubmit = {this.handleSubmit}>
+                             <div className="form-group"><label htmlFor="email">E-mail</label><input type="email" className="inputFields" placeholder="Email" name= {"email"} onChange = {this.handleChange}/></div>
+                             <div className="form-group"><label htmlFor="password">Password</label><input type="password" className="inputFields" placeholder="Password" name= {"password"} onChange = {this.handleChange}/></div>
+                             <div className="form-group"><button type="submit">Log In</button></div>
+                             <p className="message">Already registered? <Link to={"/login"}>Login</Link></p>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+             </>
         );
     }
 }
