@@ -25,7 +25,7 @@ store.subscribe( () => console.log(store.getState()));
 store.dispatch( {
   type: USER_LOADED,
   payload: {
-    email: "andri@test.ee",
+    email: "henri@test.ee",
     _id: 2,
   }
 });
