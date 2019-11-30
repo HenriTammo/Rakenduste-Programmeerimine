@@ -1,38 +1,32 @@
 import React from "react";
-import ItemList from "../components/ItemList.jsx";
+import ItemsList from "../components/ItemList.jsx";
 import Checkbox from "../components/Checkbox.jsx";
 import PropTypes from "prop-types";
 import "./homepage.css";
 import Dropdown from "../components/Dropdown.jsx";
-import { getItems } from "../actions/itemsActions.js";
-
+import {connect} from "react-redux";
+import {ItemProps} from "./CartPage.jsx";
+import {getItems} from "../store/store.js";
 
 class HomePage extends React.PureComponent{
-    constructor(props){
-      super(props);
-      this.state = {
-        sortDirection: -1,
-        items: [],
-        allCategories: ["phones", "laptops"],
-        selectedCategories: ["phones"],
 
-      };
-    }
-componentDidMount(){
-  this.fetchItems();
-}
-fetchItems = () => {
-  getItems()
-  .then( items => {
-    console.log("items", items);
-    this.setState({
-      items
-    });
-  })
-  .catch(err => {
-    console.log("err", err);
-  });
-};
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape(ItemProps)).isRequired,
+  };
+
+  constructor(props){
+    super(props);
+    this.state = {
+      sortDirection: -1,
+      allCategories: ["phones", "laptops"],
+      selectedCategories: ["phones"],
+    };
+  }
+
+  componentDidMount(){
+    this.props.dispatch(getItems());
+  }
 
     handleFilterSelect = (event) => {
       const categoryName = event.target.name;
@@ -56,7 +50,7 @@ fetchItems = () => {
     };
 
     getVisibleItems = () => {
-      return this.state.items
+      return this.props.items
       .filter(item => this.isSelected(item.category))
       .sort( (a, b) => {
         switch (this.state.sortDirection) {
@@ -75,12 +69,12 @@ fetchItems = () => {
     };
 
     render(){
-      const items = this.getVisibleItems();
+      const visibleItems = this.getVisibleItems();
       return (
         <>
         <div className={"body-wrapper"}>
           <div className={"filters-wrapper"}>
-            <ItemFilters
+            <CategoriesFilter
               allCategories={this.state.allCategories}
               handleDropdown={this.handleFilterSelect}
               isSelected={this.isSelected}
@@ -88,44 +82,49 @@ fetchItems = () => {
           </div>
         <div className={"items-header-wrapper"}>
           <div>
-            Items found {items.length} {this.state.selectedCategories.join(", ")}
+             Items found {visibleItems.length} for {this.state.selectedCategories.join(", ")}
           </div>
           <Dropdown
             direction={this.state.sortDirection}
             onChange={this.handleSortDropdown}
           />
         </div>
-        <ItemList items={items}/>
+        <ItemsList items={visibleItems}/>
         </div>
 
         </>
       );
     }
   }
-  const ItemFilters = ({allCategories, handleDropdown, isSelected}) => {
+  const CategoriesFilter = ({allCategories, handleDropdown, isSelected}) => {
     return (
       <>
          {
-        allCategories.map( categoryName => {
-          return (
-            <Checkbox
-              key={categoryName}
-              name = {categoryName}
-              onChange = {handleDropdown}
-              checked = {isSelected(categoryName)}
-            />
-          );
-        })
-      }
+            allCategories.map( categoryName => {
+              return (
+                <Checkbox
+                  key={categoryName}
+                  name = {categoryName}
+                  onChange = {handleDropdown}
+                  checked = {isSelected(categoryName)}
+                />
+              );
+            })
+          }
       </>
     );
   };
-  ItemFilters.propTypes = {
+  CategoriesFilter.propTypes = {
     allCategories: PropTypes.array.isRequired,
     handleDropdown: PropTypes.func.isRequired,
     isSelected: PropTypes.func.isRequired,
   };
+  const mapStateToProps = (store) => {
+    return {
+        items: store.items,
+    };
+};
 
 
 
-  export default HomePage;
+  export default connect(mapStateToProps)(HomePage);
