@@ -36,7 +36,7 @@ const ItemList = (props) => {
             <div className={"item_description"}>
                 <div className = "item_title">{props.title}</div>
                 <div className={"item_footer"}>
-                    <div className = "item_price">{props.price}</div>
+                    <div className = "item_price">€{props.price}</div>
                     <div className="item_reviews">{`(${getRandomIntInclusive(0,100)} reviews)`}</div>
                 </div>
             </div>

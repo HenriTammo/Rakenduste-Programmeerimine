@@ -2,13 +2,16 @@ import React from "react";
 import "./loginform.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { userUpdate } from "../store/actions";
+import { toast } from "react-toastify";
 
 
 class LoginPage extends React.PureComponent {
 
     static propTypes = {
         history: PropTypes.object.isRequired,
-        onLogin: PropTypes.func.isRequired,
+        dispatch: PropTypes.func.isRequired,
     };
 
     constructor(props) {
@@ -31,14 +34,16 @@ class LoginPage extends React.PureComponent {
             body: JSON.stringify(this.state),
         })
         .then( res=> res.json())
-        .then( ({token, user}) => {
-            console.log("response", token, user);
-            this.props.onLogin({token, user});
-            this.props.history.push(`/users/${user._id}`);
-        })
+        .then(this.handleSuccess)
         .catch ( err => {
             console.log("Error", err);
+            toast.error("Logimine ebaõnnestus!");
         });
+    };
+
+    handleSuccess = ({user}) => {
+        this.props.dispatch(userUpdate(user));
+        this.props.history.push(`/users/${user._id}`);
     };
 
     handleChange = (e) => {
@@ -50,19 +55,20 @@ class LoginPage extends React.PureComponent {
     render() {
         return (
             <>
-            <div className="form" id="login">
+            <div><h1 style={{textAlign: "center"}}>Login</h1></div>
+            <div className="form">
             <div className="form-toggle"></div>
             <div className="form-panel one">
-                <div>
+                <div className="form-header">
                     <h1>Account Login</h1>
                 </div>
-                <div className="sep"></div>
                 <div className="form-content">
                     <form onSubmit = {this.handleSubmit}>
-                        <div className="form-group"><label htmlFor="email">E-mail</label><input type="email" name="email" placeholder="Email" value = {this.state.email} onChange = {this.handleChange}/></div>
-                        <div className="form-group"><label htmlFor="password">Password</label><input type="password" name="password" placeholder="Password" value = {this.state.password} onChange = {this.handleChange} /></div>
+                        <div className="form-group"><label htmlFor="email">email</label><input type="email" name="email" value = {this.state.email} onChange = {this.handleChange}/></div>
+                        <div className="form-group"><label htmlFor="password">Password</label><input type="password" name="password" value = {this.state.password} onChange = {this.handleChange} /></div>
+                        <div className="form-group"><label className="form-remember"><input type="checkbox"/>Remember Me</label><a className="form-recovery" href="#">Forgot Password?</a></div>
                         <div className="form-group"><button type="submit">Log In</button></div>
-                        <Link to={"/signup"}>Create an account</Link>
+                        <p className= "message"> Not registered? <Link to={"/signup"}>Create an account</Link></p>
                     </form>
                 </div>
             </div>
@@ -71,4 +77,4 @@ class LoginPage extends React.PureComponent {
         );
     }
 }
-export default LoginPage;
+export default connect()(LoginPage);
