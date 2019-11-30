@@ -1,7 +1,8 @@
 {
-   "env": {
+    "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "es6": true
     },
     "settings": {
         "react": {
@@ -13,7 +14,7 @@
         "ecmaVersion": 2019,
         "sourceType": "module"
     },
-    "extends": [
+    "extends": [ 
         "eslint:recommended",
         "plugin:react/recommended"
     ],

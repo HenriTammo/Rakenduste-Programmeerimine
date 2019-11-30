@@ -3,6 +3,7 @@ import "./signupform.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
+import * as services from "../services.js";
 
 class SignupPage extends React.PureComponent {
 
@@ -20,20 +21,8 @@ class SignupPage extends React.PureComponent {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log("submit", this.state);
-        event.preventDefault();
-        console.log("submit", this.state);
-        fetch("/api/v1/auth/signup", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify(this.state),
-        })
-        .then( res => res.json())
-        .then( data=>{
-            console.log("data", data);
+        services.signup(this.state)
+        .then( () => {
             this.props.history.push("/login");
             toast.success("Kasutaja loodud!");
         })
@@ -53,34 +42,25 @@ class SignupPage extends React.PureComponent {
 
     render() {
         return (
-            <>
-            <div><h1 style={{textAlign: "center"}}>Signup</h1></div>
-            <div className="signupSection">
-            <div className="info">
-                <h2>Welcome to</h2>
-                <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-                <p>Account registration</p>
+          <>
+           <div className="form" id="signup">
+                <div className="form-toggle"></div>
+                <div className="form-panel one">
+                    <div>
+                        <h1>Account Creation</h1>
+                    </div>
+                    <div className="sep"></div>
+                    <div className="form-content">
+                        <form onSubmit = {this.handleSubmit}>
+                            <div className="form-group"><label htmlFor="email">E-mail</label><input type="email" className="inputFields" placeholder="Email" name= {"email"} onChange = {this.handleChange}/></div>
+                            <div className="form-group"><label htmlFor="password">Password</label><input type="password" className="inputFields" placeholder="Password" name= {"password"} onChange = {this.handleChange}/></div>
+                            <div className="form-group"><button type="submit">Create</button></div>
+                            <p className="message">Already registered? <Link to={"/login"}>Login</Link></p>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <form className="register-form"  onSubmit={this.handleSubmit}>
-                <h2 className="header2_info">Create Account</h2>
-                <ul className="noBullet">
-                    <li>
-                        <label htmlFor="email"></label>
-                        <input type="email" className="inputFields" placeholder="Email" name= {"email"} onChange = {this.handleChange}/>
-                    </li>
-                    <li>
-                        <label htmlFor="password"></label>
-                        <input type="password" className="inputFields" placeholder="Password" name= {"password"} onChange = {this.handleChange}/>
-                    </li>
-
-                    <li id="center-btn">
-                        <button className="join-btn"> submit </button>
-                    </li>
-                    <p className="message">Already registered? <Link to={"/login"}>Login</Link></p>
-                </ul>
-            </form>
-        </div>
-        </>
+            </>
         );
     }
 }
